@@ -47,3 +47,15 @@ func main() {
 
     rootCmd.AddCommand(searchCmd, connCmd)
     rootCmd.Execute()
+}
+
+// to set current our aws profile
+func init() {
+    var awsProfile string
+    var awsRegion string
+
+    rootCmd.PersistentFlags().StringVar(&awsProfile, "profile", "default", "AWS profile to use")
+    rootCmd.PersistentFlags().StringVar(&awsRegion, "region", "eu-west-2", "AWS region")
+}
+
+// Usage: patchee --profile prod --region us-east-1 search web*
