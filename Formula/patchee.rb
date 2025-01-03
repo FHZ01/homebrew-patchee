@@ -2,7 +2,7 @@ class Patchee < Formula
   desc "CLI tool for AWS EC2 instance management and SSH connections"
   homepage "https://github.com/FHZ01/patchee"
   url "https://github.com/FHZ01/patchee/archive/v1.0.0.tar.gz"
-  sha256 "52734f5660f07219a02abaf72b7401b7aafd4b2dfc26e7879f99df921a474bc1"
+  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
   license "MIT"
 
   depends_on "go" => :build
