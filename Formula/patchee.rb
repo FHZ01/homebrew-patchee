@@ -1,10 +1,8 @@
 class Patchee < Formula
   desc "CLI tool for AWS EC2 instance management and SSH connections"
   homepage "https://github.com/FHZ01/patchee"
-  url "https://github.com/FHZ01/patchee/archive/v1.0.0.tar.gz"
-  sha256 "d5558cd419c8d46bdc958064cb97f963d1ea793866414c025906ec15033512ed"
-  license "MIT"
-
+  head "https://github.com/FHZ01/patchee.git", branch: "main"
+  
   depends_on "go" => :build
 
   def install
@@ -12,6 +10,6 @@ class Patchee < Formula
   end
 
   test do
-    assert_match "patchee version #{version}", shell_output("#{bin}/patchee --version")
+    system "#{bin}/patchee", "--version"
   end
 end
