@@ -9,6 +9,7 @@ import (
 )
 
 func main() {
+    fmt.Println("Patchee CLI v0.0.1")
     var rootCmd = &cobra.Command{Use: "patchee"}
     
     var searchCmd = &cobra.Command{
